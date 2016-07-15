@@ -1,3 +1,0 @@
-add_lunch_combo aokp_oneplus3-user
-add_lunch_combo aokp_oneplus3-userdebug
-add_lunch_combo aokp_oneplus3-eng

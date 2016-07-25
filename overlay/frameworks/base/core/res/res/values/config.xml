@@ -30,18 +30,18 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>         <!-- pitch black -->
-        <item>11</item>        <!-- dark indoor -->
-        <item>25</item>        <!-- twilight -->
-        <item>50</item>        <!-- dim indoor -->
-        <item>100</item>       <!-- home -->
+        <item>1</item>        <!-- pitch black -->
+        <item>11</item>       <!-- dark indoor -->
+        <item>25</item>       <!-- twilight -->
+        <item>50</item>       <!-- dim indoor -->
+        <item>100</item>      <!-- home -->
         <item>200</item>
-        <item>300</item>       <!-- office -->
-        <item>500</item>       <!-- sunrise -->
+        <item>300</item>      <!-- office -->
+        <item>500</item>      <!-- sunrise -->
         <item>750</item>
-        <item>1000</item>      <!-- overcast -->
+        <item>1000</item>     <!-- overcast -->
         <item>5000</item>
-        <item>10000</item>     <!-- daylight -->
+        <item>10000</item>    <!-- daylight -->
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -49,13 +49,13 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>7</item>  
-        <item>12</item> 
-        <item>17</item> 
-        <item>29</item> 
-        <item>35</item> 
-        <item>47</item> 
-        <item>75</item> 
+        <item>7</item>
+        <item>12</item>
+        <item>17</item>
+        <item>29</item>
+        <item>35</item>
+        <item>47</item>
+        <item>75</item>
         <item>114</item>
         <item>130</item>
         <item>170</item>
@@ -92,22 +92,20 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
+        <item>25</item>
+        <item>10</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>10</item>
-        <item>20</item>
-        <item>30</item>
+        <item>25</item>
+        <item>8</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
+        <item>25</item>
     </integer-array>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes

@@ -1,6 +1,5 @@
 # Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017-2018 The LineageOS Project
-# Copyright (C) 2017 The AOKP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from oneplus3 device
 $(call inherit-product, device/oneplus/oneplus3/device.mk)
 
-# Inherit some common AOKP stuff.
+# Inherit some common Lineage stuff.
 $(call inherit-product, vendor/aokp/configs/common_full_phone.mk)
 
 # Vendor security patch level

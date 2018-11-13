@@ -1,17 +1,17 @@
-# configure.ac -- Autoconf script for gps loc_hal
+# configure.ac -- Autoconf script for gps location-api-iface
 #
 # Process this file with autoconf to produce a configure script
 
 # Requires autoconf tool later than 2.61
 AC_PREREQ(2.61)
-# Initialize the gps loc-hal package version 1.0.0
-AC_INIT([loc-hal],1.0.0)
+# Initialize the gps location-api-iface package version 1.0.0
+AC_INIT([location-api-iface],1.0.0)
 # Does not strictly follow GNU Coding standards
 AM_INIT_AUTOMAKE([foreign])
 # Disables auto rebuilding of configure, Makefile.ins
 AM_MAINTAINER_MODE
 # Verifies the --srcdir is correct by checking for the path
-AC_CONFIG_SRCDIR([Makefile.am])
+AC_CONFIG_SRCDIR([location-api.pc.in])
 # defines some macros variable to be included by source
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
@@ -33,10 +33,6 @@ PKG_CHECK_MODULES([GPSUTILS], [gps-utils])
 AC_SUBST([GPSUTILS_CFLAGS])
 AC_SUBST([GPSUTILS_LIBS])
 
-PKG_CHECK_MODULES([LOCCORE], [loc-core])
-AC_SUBST([LOCCORE_CFLAGS])
-AC_SUBST([LOCCORE_LIBS])
-
 AC_ARG_WITH([core_includes],
       AC_HELP_STRING([--with-core-includes=@<:@dir@:>@],
          [Specify the location of the core headers]),
@@ -49,11 +45,11 @@ fi
 
 AC_ARG_WITH([locpla_includes],
       AC_HELP_STRING([--with-locpla-includes=@<:@dir@:>@],
-         [specify the path to locpla-includes in loc-pla_git.bb]),
+        [Specify the path to locpla-includes in loc-pla_git.bb]),
       [locpla_incdir=$withval],
       with_locpla_includes=no)
 
-if test "x$with_locpla_includes" != "xno"; then
+if test "x${with_locpla_includes}" != "xno"; then
    AC_SUBST(LOCPLA_CFLAGS, "-I${locpla_incdir}")
 fi
 
@@ -80,8 +76,7 @@ AM_CONDITIONAL(USE_GLIB, test "x${with_glib}" = "xyes")
 
 AC_CONFIG_FILES([ \
         Makefile \
-        gnss/Makefile \
-        loc-hal.pc \
+        location-api.pc \
         ])
 
 AC_OUTPUT

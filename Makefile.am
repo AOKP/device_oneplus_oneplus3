@@ -1,3 +1,10 @@
+# Makefile.am - Automake script for gps loc_api
+#
+
 ACLOCAL_AMFLAGS = -I m4
-AUTOMAKE_OPTIONS = foreign
-SUBDIRS = ipanat/src ipacm/src/
+
+SUBDIRS = gnss
+
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = loc-hal.pc
+EXTRA_DIST = $(pkgconfig_DATA)

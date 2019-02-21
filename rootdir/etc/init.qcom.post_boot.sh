@@ -3376,6 +3376,11 @@ case "$target" in
         echo 0 > /sys/devices/system/cpu/cpu2/cpufreq/interactive/ignore_hispeed_on_notif
         # re-enable thermal hotplug
         echo 1 > /sys/module/msm_thermal/core_control/enabled
+        # set idle GPU to 133 Mhz
+        echo 6 > /sys/class/kgsl/kgsl-3d0/default_pwrlevel
+        echo 7 > /sys/class/kgsl/kgsl-3d0/default_pwrlevel
+        echo 6 > /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+        echo 7 > /sys/class/kgsl/kgsl-3d0/min_pwrlevel
         # input boost configuration
         echo "0:1324800 2:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
         echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms

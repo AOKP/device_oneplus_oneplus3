@@ -1,0 +1,4 @@
+  <apn carrier="ATT WAP" mcc="310" mnc="70" apn="wap.cingular" proxy="wireless.cingular.com" port="80" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" type="default,mms" />
+  <apn carrier="ATT Broadband" mcc="310" mnc="70" apn="Broadband" type="default,supl" />
+  <apn carrier="ATT WAP" mcc="310" mnc="90" apn="wap.cingular" proxy="wireless.cingular.com" port="80" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" type="default,mms" />
+  <apn carrier="ATT Broadband" mcc="310" mnc="90" apn="Broadband" type="default,supl" />

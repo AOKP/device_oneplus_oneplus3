@@ -205,6 +205,7 @@ TARGET_USES_INTERACTION_BOOST := true
 # RIL
 TARGET_RIL_VARIANT := caf
 TARGET_USES_OLD_MNC_FORMAT := true
+CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/att_apns.xml
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/recovery/recovery.fstab
